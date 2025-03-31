@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<div class="jumbotron mt-3">
+    <div class="container">
+        <h1 class="display-3">Curso de Angular</h1>
+        <p>Una aplicación hecha en Angular que informa sobre Angular!!!</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Leer más</a></p>
+    </div>
+</div>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4"> <!-- row-cols-md-3 es el que hace que se organicen -->
+        @for (container of containers; track container.titulo) {
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{container.titulo}}</h5>
+                    <p class="card-text">{{container.contenido}}</p>
+                    <a class="btn btn-dark" href="#" role="button">Leer más &raquo;</a>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+<hr>
