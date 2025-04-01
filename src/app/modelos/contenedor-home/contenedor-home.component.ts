@@ -18,7 +18,7 @@ export class ContenedorHomeComponent {
     },
     {
       titulo: "Directivas",
-      contenido: "¿Que son las directivas? ¿Cuales se utilizan mas?"
+      contenido: "¿Que-o son las directivas? ¿Cuales se utilizan mas?"
     },
     {
       titulo: "Rutas",
