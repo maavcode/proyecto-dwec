@@ -19,16 +19,16 @@ export class TemarioService {
   constructor(private http: HttpClient) { }
 
   getTemas(): Observable<Tema[]> {
-    const heroes = this.http.get<Tema[]>(this.temasUrl).
+    const temas = this.http.get<Tema[]>(this.temasUrl).
       pipe(
-        tap(_ => this.log('Heroes cargados')),
+        tap(_ => this.log('Temas cargados')),
         catchError(this.handleError<Tema[]>('getTemas', [])));
-    return heroes;
+    return temas;
   }
 
   /** Método de log para los mensajes de la aplicación */
   private log(message: string) {
-    console.log(`HeroService: ${message}`);
+    console.log(`TemarioService: ${message}`);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

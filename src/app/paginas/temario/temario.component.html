@@ -1,1 +1,23 @@
-<p>temario works!</p>
+<!DOCTYPE html>
+
+<div class="container-fluid mt-4">
+    <h5 class="fw-bold">Hay {{temas.length}} temas</h5>
+    <p><i class="fa-regular fa-thumbs-up"></i> Me gustan: 0</p>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @for (tema of temas; track tema.id) {
+        <div class="card border-primary mb-3" style="max-width: 100%;">
+            <div class="card-header bg-white border-primary fw-bold">TEMA: {{tema.id}}</div>
+            <div class="card-body text-primary">
+                <h5 class="card-title fw-bold">{{tema.titulo}} ({{tema.duracion}} sesiones)</h5>
+                <p class="card-text text-dark">{{tema.contenido}}</p>
+                <div class="d-flex align-items-center bg-light p-2 rounded">
+                    <i class="fas fa-thumbs-up text-primary me-2"></i>
+                    <span class="fw-bold text-dark">Autor: {{tema.autor}}</span>
+                    <span class="ms-auto text-secondary">(Valoración: {{tema.puntuacion}})</span>
+                </div>
+            </div>
+        </div>
+    }
+</div>
